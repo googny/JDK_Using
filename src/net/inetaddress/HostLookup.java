@@ -1,4 +1,4 @@
-package net.basicsocket;
+package net.inetaddress;
 
 import java.io.BufferedReader;
 import java.io.IOException;

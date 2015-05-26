@@ -1,4 +1,4 @@
-package net.basicsocket;
+package net.inetaddress;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
