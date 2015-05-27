@@ -6,4 +6,5 @@ package net.urlanduri;
  * toExternalForm() 将URL对象转换为字符串，可用于HTML链接
  */
 public class URLTools {
+
 }
