@@ -9,7 +9,9 @@ public class StringUseCase {
     public static void main(String[] args) {
 //        useEqualSign();
 //        useEqualsMethod();
-        JVMOptimize();
+//        JVMOptimize();
+//        stringInternMethod();
+        stringBuilderAndStringPlus();
     }
 
     public static void useEqualSign() {
@@ -58,6 +60,30 @@ public class StringUseCase {
         System.out.println(d == compare); // true
         System.out.println(e == compare); // false
         System.out.println(f == compare); // false
+    }
+
+    public static void stringInternMethod() {
+        String a = "a";
+        String b = a + "b";
+        String c = "ab";
+        String d = new String(b);
+
+        System.out.println(b == c);
+        System.out.println(c == d);
+        System.out.println(c == d.intern());
+        System.out.println(c.intern() == d.intern());
+        System.out.println(b.intern() == d.intern());
+    }
+
+    public static void stringBuilderAndStringPlus() {
+        String a = "";
+        String b = "";
+        for (int i = 0; i < 1024; i++) {
+            b += "b";
+        }
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            a += b;
+        }
     }
 }
 
